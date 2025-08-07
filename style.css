@@ -10,6 +10,8 @@ body {
     font-style: normal;
 
 }
+/*navbar*/
+
 .navbar{
     display: flex;
     justify-content: space-between;
@@ -90,19 +92,31 @@ gap: 20px;
     color: white;
     border-radius: 30px;
     padding: 10px;
+    border: 1px solid #A435F0;
     
 }
+.categories p:hover{
+    color: black;
+    border: solid #A435F0 1px ;
+    background-color: transparent;
+    transition: 1s;
+    cursor:pointer;
+}
+
 .sale-img{
     position:relative ;
+    
+
+    
 }
+
+    
+
 
 .sale-img img{
      width: 100%;
-     
-}
-.sale-img__offer h1{
-    font-size: 25px;
-    padding-bottom: 10px;
+    
+
 }
 .sale-img__offer{
     background-color: white;
@@ -112,6 +126,27 @@ gap: 20px;
     padding: 20px;
     top: 100px;
     left: 10px;
+    animation-name: zoom;
+    animation-duration: 2s;
+    opacity: 0;
+    animation-fill-mode:forwards;
+    
+    
+}
+@keyframes zoom {
+    0%{
+        opacity: 0;
+        transform: scale(0);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.sale-img__offer h1{
+    font-size: 25px;
+    padding-bottom: 10px;
+    
 }
 
 .recommended{
